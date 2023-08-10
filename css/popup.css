@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.modal-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    font-size: 14px;
+    padding: 0 16px;
+}
+
+.modal__header--text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form-group:first {
+    margin-top: 20px;
+}
+
+.form-label {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.form-label-require::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+.form-input,
+.form-input input {
+    height: 36px;
+    position: relative;
+    outline: none;
+}
+
+.form-input select {
+    outline: none;
+}
+
+.form-input select {
+    padding: 0;
+}
+
+.form-input select:invalid,
+.form-input select option[value=""] {
+  color: gray;
+  font-style: italic;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 0;
+
+}
+
+.form-group input[type=date] {
+    position: relative;
+}
+
+.form-group input[type=date]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+}
+
+.form-group input[type="date"]:before {
+    color: transparent;
+    display: block;
+    content: '\f073';
+    /* This is the calendar icon in FontAwesome */
+    background: url('../assets/icon/qlts-icon.svg') no-repeat -287px -67px;
+	width: 18px;
+	height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+  }
+
+.form-group .left-input,
+.form-input select,
+.form-group input[type=date] {
+    padding-left: 12px;
+}
+
+.form-group .right-input {
+    padding-right: 8px;
+}
+
+.form-input .right-input {
+    padding-right: 12px;
+}
+
+.popup-right-position-icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+.popup-right-top-position-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-115%);
+    right: 8px;
+}
+
+.popup-right-bottom-position-icon {
+    position: absolute;
+    right: 8px;
+    bottom: 50%;
+    transform: translateY(135%);
+}

@@ -1,0 +1,39 @@
+
+.c-header-left-position-icon {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+}
+
+.c-header-right-position-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+
+.content__header--left,
+.content__header--right {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 8px;
+}
+
+.content__header--left input,
+.content__header--left select {
+    width: 100%;
+    height: 100%;
+    padding-left: 32px;
+    border: 1px solid var(--border-color);
+    border-radius: 2.5px;
+    outline: none;
+}

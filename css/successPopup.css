@@ -1,0 +1,39 @@
+
+.success__modal--container {
+    width: 350px;
+    height: 60px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideIn ease 0.5s, fadeOut linear 1s 3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.success__modal--container img {
+    width: 40px;
+    height: auto;
+}
+
+.success__modal--container p {
+    font-size: 16px;
+    margin-left: 8px;
+}

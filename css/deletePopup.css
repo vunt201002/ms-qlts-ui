@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.delete__modal--container {
+    width: 400px;
+    min-height: 150px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    animation: modalFacein ease 0.5s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes modalFacein {
+    from {
+        transform: translateY(-1000px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.dangerous {
+    height: 40px;
+    width: auto;
+}
+
+.dangerous__text {
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+.delete__modal--content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 24px;
+}
+
+.delete__modal--button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 24px;
+}

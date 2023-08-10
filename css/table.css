@@ -1,0 +1,97 @@
+
+.table__container {
+    height: 480px;
+    overflow: auto;
+    border-radius: 3.5px;
+    border: 1px solid #afafaf;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+table thead {
+    height: 38px;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+th,
+td {
+    margin: 12px;
+    padding: 8px;
+    /* white-space: nowrap; */
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #f5f5f5;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+td {
+    font-size: 12px;
+} 
+
+tr {
+    height: 40px;
+    background-color: white;
+}
+
+tbody tr:hover td {
+    background-color: rgba(125, 188, 255, 0.6);
+}
+
+tbody tr:hover .table-update-button,
+tbody tr:hover .table-copy-button {
+    display: block;
+}
+
+tfoot td,
+tfoot th {
+    position: sticky;
+    bottom: 0;
+    background: white;
+}
+
+.table-right-position-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pagination {
+    display: inline-block;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+.pagination a.selected {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.table-update-button,
+.table-copy-button {
+    display: none;
+}

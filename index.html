@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form><input type="text"></form>
+    
+    <script>
+        const input  = document.querySelector('input')
+        
+        // only allow enter number or backspace
+        input.addEventListener('keydown', (event) => {
+            if (!/[0-9]/.test(event.key) && event.key !== 'Backspace') {
+                event.preventDefault();
+            }
+        });
+
+        // format the input when blur
+        input.addEventListener('change', (e) => {
+            const num = Number(e.target.value);
+            const formatted = num.toLocaleString('vi-VN'); // use this to format number
+            console.log(formatted);
+            e.target.value = formatted;
+        });
+
+    </script>
+
+</body>
+</html>

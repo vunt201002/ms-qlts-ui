@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/content__header.css">
+    <title>Content header</title>
+</head>
+<body>
+    <!-- header content -->
+    <div class="content__header">
+        <!-- left -->
+        <div class="content__header--left">
+            <div
+                style="
+                    position: relative;
+                    height: 35px;
+                    width: 179px;
+                "
+            >
+                <div class="search-sprite c-header-left-position-icon"></div>
+                <input type="text" placeholder="Tìm kiếm tài sản">
+            </div>
+            <div
+                style="
+                    position: relative;
+                    height: 35px;
+                    width: 219px;
+                "
+            >
+                <div class="filter-sprite c-header-left-position-icon"></div>
+                <div class="arrow-down-solid-sprite c-header-right-position-icon"></div>
+                <select  style="height: 100%; font-size: 12px;">
+                    <option value="" disabled selected hidden>Loại tài sản</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div
+                style="
+                    position: relative;
+                    height: 35px;
+                    width: 219px;
+                "
+            >
+                <div class="filter-sprite c-header-left-position-icon"></div>
+                <div class="arrow-down-solid-sprite c-header-right-position-icon"></div>
+                <select  style="height: 100%; font-size: 12px;">
+                    <option value="" disabled selected hidden>Bộ phận sử dụng</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="content__header--right">
+            <button
+                style="
+                    color: white;
+                    background-color: #1597b7;
+                    border: 1.5px solid #1597b7;
+                    border-radius: 3px;
+                    width: 100px;
+                    height: 32px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    box-shadow: inset 0 2px 6px rgba(0, 0, 0, .16);
+                    padding: 1px 6px;
+                "
+                class="addBtn"
+            >
+                +  Thêm tài sản
+            </button>
+            <button
+                style="
+                    background-color: white;
+                    border: none;
+                    border-radius: 3px;
+                    width: 30px;
+                    height: 32px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .16);
+                    padding: 1px 6px;
+                "
+            >
+                <div class="export-sprite"></div>
+            </button>
+            <button
+                    style="
+                        background-color: white;
+                        border: none;
+                        border-radius: 3px;
+                        width: 30px;
+                        height: 32px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        color: red;
+                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .16);
+                        padding: 1px 6px;
+                "
+            >
+                <div class="red-trash-sprite"></div>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

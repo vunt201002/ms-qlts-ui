@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/customDropdown.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="dropdown-header">
+            <div class="filter-sprite dropdown-left-position-icon"></div>
+            <div class="arrow-down-solid-sprite dropdown-right-position-icon"></div>
+            <input type="text" class="dropdown__input" placeholder="Loại tài sản">
+        </div>
+        <div class="dropdown__option">
+            <div class="dropdown__option--header">
+                <p class="dropdown__option--item-id">Mã</p>
+                <p class="dropdown__option--item-name">Tên</p>
+            </div>
+            <div class="dropdown__option--items">
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">1</p>
+                    <p class="dropdown__option--item-name">may tinh</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item">
+                    <p class="dropdown__option--item-id space-left">2</p>
+                    <p class="dropdown__option--item-name">dien thoai</p>
+                </div>
+                <div class="dropdown__option--item border-none">
+                    <p class="dropdown__option--item-id space-left">3</p>
+                    <p class="dropdown__option--item-name">tv</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownOption = document.querySelector('.dropdown__option');
+        const dropdownInput = document.querySelector('.dropdown__input');
+
+        const dropdownOptionItem = document.querySelectorAll('.dropdown__option--item');
+        const dropdownOptionItemArr = Array.prototype.slice.call(dropdownOptionItem);
+
+        const chooseOption = () => {
+            for (let i = 0; i < dropdownOptionItemArr.length; i++) {
+                const option = dropdownOptionItemArr[i].querySelector('.dropdown__option--item-name').textContent;
+                dropdownOptionItemArr[i].addEventListener('click', () => {
+                    dropdownInput.value = option;
+                });
+            }
+        }
+
+        const optionSearch = () => {
+            dropdownInput.addEventListener('keyup', () => {
+                const filter = dropdownInput.value.toUpperCase();
+                for (let i = 0; i < dropdownOptionItemArr.length; i++) {
+                    let textValue = dropdownOptionItemArr[i].textContent || dropdownOptionItemArr.innerText;
+                    
+                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                        dropdownOptionItemArr[i].style.display = '';
+                    } else {
+                        dropdownOptionItemArr[i].style.display = 'none';
+                    }
+                };
+            });
+        }
+
+        optionSearch();
+
+        chooseOption();
+
+        dropdownInput.addEventListener('click', (event) => {
+            event.stopPropagation();
+            dropdownOption.style.display = 'block';
+        });
+
+        dropdownOption.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        document.body.addEventListener('click', () => {
+            dropdownOption.style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>

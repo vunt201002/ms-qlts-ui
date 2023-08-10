@@ -1,0 +1,53 @@
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.main {
+    flex: 1;
+}
+
+.main__content {
+    background-color: var(--main-bg);
+    height: calc(100vh - 44px);
+    padding: 0 16px;
+}
+
+.modal,
+.delete-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container {
+    width: 800px;
+    background-color: white;
+    animation: fadeIn ease 0.3s;
+}
+
+.success-modal {
+    position: fixed;
+    top: 47px;
+    right: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-1000px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
